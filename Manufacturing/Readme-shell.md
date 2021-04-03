@@ -102,6 +102,10 @@
 
     <a href='https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Analytics-and-AI-Engagement%2Fmain%2FManufacturing%2Fautomation%2FmainTemplate-shell.json' target='_blank'><img src='http://azuredeploy.net/deploybutton.png' /></a>
 
+->Local Link - does not work in Azure, because it is not public
+    <a href='https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgitlab.infomotion.de/MichaelStrauch/Azure-Analytics-and-AI-Engagement/-/blob/main/Manufacturing/automation/mainTemplate-shell.json' target='_blank'><img src='http://azuredeploy.net/deploybutton.png' /></a>
+
+
 2. On the Custom deployment form, **select** your desired Subscription.
 3. **Type** the resource group name 'Synapse-WWI-Lab' created in [Task 1](#task-1-create-a-resource-group-in-azure).
 4. **Select** Region where you want to deploy.
