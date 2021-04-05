@@ -1179,7 +1179,7 @@
          "[concat('Microsoft.Storage/storageAccounts/', variables('storage_account_name_dreamdemostorageforgen2'))]",
          "[concat('Microsoft.Synapse/workspaces/', variables('workspace_name_dreamdemosynapse'))]"
        ],
-       "location": "northeurope",
+       "location":"[resourceGroup().location]",
        "identity": {
          "type": "SystemAssigned"
        },
@@ -1521,7 +1521,7 @@
          "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases',variables('cosmos_account_name_mfgdemo'), variables('cosmos_database_name_mfgdemo_industrial'))]",
          "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases',variables('cosmos_account_name_mfgdemo'), variables('cosmos_database_name_mfgdemo_manufacturing'))]"
        ],
-       "location": "northeurope",
+       "location":"[resourceGroup().location]",
        "identity": {
          "type": "SystemAssigned"
        },
@@ -1621,7 +1621,7 @@
        "dependsOn": [
          "[concat('Microsoft.Storage/storageAccounts/', variables('storage_account_name_dreamdemostorageforgen2'))]"
        ],
-       "location": "northeurope",
+       "location":"[resourceGroup().location]",
        "identity": {
          "type": "SystemAssigned"
        },
@@ -1709,7 +1709,7 @@
        "type": "Microsoft.StreamAnalytics/streamingjobs",
        "apiVersion": "2019-06-01",
        "name": "[variables('asa_name_race_car_asa')]",
-       "location": "northeurope",
+       "location":"[resourceGroup().location]",
        "identity": {
          "type": "SystemAssigned"
        },
