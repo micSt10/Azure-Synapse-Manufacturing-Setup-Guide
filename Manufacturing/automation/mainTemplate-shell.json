@@ -42,7 +42,7 @@
      "unique_suffix": "[concat(uniqueString(deployment().name), '-', parameters('environment_code'))]",
      "location": "[parameters('location')]",
      "search_name": "[concat('search-',variables('unique_suffix'))]",
-     "key_vault_name": "[concat('kv-',variables('unique_suffix'))]",
+     "key_vault_name": "[concat('kv-mic-',variables('unique_suffix'))]",
      "cosmos_database_container_name_historical_data": "historical-data",
      "cosmos_database_container_name_historical_data_adf": "historical-data-adf",
      "cosmos_account_name_mfgdemo": "[if(greater(length(concat('cosmosdb-mfgdemo-', uniqueString(deployment().name),parameters('environment_code'))), 43), substring(concat('cosmosdb-mfgdemo-', uniqueString(deployment().name),parameters('environment_code')),0,43) , concat('cosmosdb-mfgdemo-', uniqueString(deployment().name),parameters('environment_code')) )]",
