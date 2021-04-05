@@ -167,7 +167,7 @@ $location = (Get-AzResourceGroup -Name $rgName).Location
 $storageAccountName = $dataLakeAccountName
 $forms_cogs_name = "forms-$suffix";
 $searchName = "search-$suffix";
-$keyVaultName = "kv-ms$init-synapse";
+$keyVaultName = "kv-ms$init";
 $cognitive_services_name = "dreamcognitiveservices$init"
 $text_translation_service_name = "Mutarjum-$suffix"
 $amlworkspacename = "amlws-$suffix"
@@ -545,11 +545,13 @@ Install-Module -Name MicrosoftPowerBIMgmt -Force
 Login-PowerBI
 $principal=az resource show -g $rgName -n $mfgasaName --resource-type "Microsoft.StreamAnalytics/streamingjobs"|ConvertFrom-Json
 $principalId=$principal.identity.principalId
-Add-PowerBIWorkspaceUser -WorkspaceId $wsId -PrincipalId $principalId -PrincipalType App -AccessRight Admin
+#läuft auf einen Fehler wegen fehlenden Rechten
+#Add-PowerBIWorkspaceUser -WorkspaceId $wsId -PrincipalId $principalId -PrincipalType App -AccessRight Admin
 
 $principal=az resource show -g $rgName -n $carasaName --resource-type "Microsoft.StreamAnalytics/streamingjobs"|ConvertFrom-Json
 $principalId=$principal.identity.principalId
-Add-PowerBIWorkspaceUser -WorkspaceId $wsId -PrincipalId $principalId -PrincipalType App -AccessRight Admin
+#läuft auf einen Fehler wegen fehlenden Rechten
+#Add-PowerBIWorkspaceUser -WorkspaceId $wsId -PrincipalId $principalId -PrincipalType App -AccessRight Admin
 
 #start ASA
 Start-AzStreamAnalyticsJob -ResourceGroupName $rgName -Name $mfgASATelemetryName -OutputStartMode 'JobStartTime'
